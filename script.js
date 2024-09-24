@@ -1,8 +1,8 @@
 new fullpage('#fullPage', {
   autoScrolling: true,
   navigation: true,
-  navigationTooltips: ['ABOUT ME', 'CALM', 'WATCHGOODS', 'PROJECT 3'],
-  showActiveTooltip: true,
+  navigationTooltips: ['About', 'Projects', 'Contact'],
+  // showActiveTooltip: true,
   navigationPosition: 'left',
   continuousVertical: true,
 })
