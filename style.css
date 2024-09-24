@@ -1,0 +1,142 @@
+@font-face {
+	font-family: "be-vietnam";
+	src: url("bevietnam-regular-webfont.woff2") format("woff2"),
+		url("bevietnam-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: be-vietnam, Helvetica, sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	/* outline: 1px solid green; */
+}
+
+html {
+	font-size: 62.5%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+
+#fp-nav ul li {
+  .fp-tooltip {
+    color: black;
+    font-weight: bold;
+  }
+
+  a span {
+    background: black;
+  }
+
+}
+
+.s1 {
+	.content-container {
+		display: flex;
+    flex-direction: column;
+		justify-content: center;
+    align-items: center;
+
+    .top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        width: 45rem;
+        gap: 1rem;
+  
+        .headline {
+          font-size: 3.6rem;
+          font-weight: bold;
+        }
+      
+        .description {
+          color: grey;
+          font-size: 1.4rem;
+          margin-top: 1rem;
+        }
+  
+        .icon-wrapper {
+          margin-top: 1rem;
+          display: flex;
+          gap: 1rem;
+        
+          svg {
+            width: 3rem;
+            height: auto;
+            /* fill: white; */
+          }
+        }
+      }
+  
+      .image-container {
+        width: 24rem;
+        height: 24rem;
+        border-radius: 50%; 
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+  
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .bottom {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      
+      .tech-container {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+
+        span {
+          margin-right: 2rem;
+        }
+  
+        img {
+          width: 36px;
+          height: auto;
+        }
+      }
+    }
+	}
+}
