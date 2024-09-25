@@ -6,7 +6,6 @@ new fullpage('#fullPage', {
   navigationPosition: 'left',
   continuousVertical: true,
 })
-
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
 window.addEventListener("mousemove", function(e) {
