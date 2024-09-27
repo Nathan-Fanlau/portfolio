@@ -1,7 +1,7 @@
 @font-face {
 	font-family: "be-vietnam";
-	src: url("bevietnam-regular-webfont.woff2") format("woff2"),
-		url("bevietnam-regular-webfont.woff") format("woff");
+	src: url("font/bevietnam-regular-webfont.woff2") format("woff2"),
+		url("font/bevietnam-regular-webfont.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -109,7 +109,7 @@ body {
         gap: 0.8rem;
 
         .greetings {
-          font-size: 2.2rem;
+          font-size: var(--font-medium);
         }
   
         .name {
@@ -280,30 +280,40 @@ body {
           text-align: center;
           opacity: 0;
           transition: opacity 0.5s ease;
-  
-          .description {
-            font-size: var(--font-medium);
-            font-family: be-vietnam, Helvetica;
+
+          a {
+            text-decoration: none;
+
+            p {
+              color: white;
+            }
+
+            .description {
+              font-size: var(--font-medium);
+              font-family: be-vietnam, Helvetica;
+            }
+    
+            .btn {
+              width: 16rem;
+              height: 4rem;
+              border-radius: 2rem;
+              margin-top: 2rem;
+              font-size: var(--font-small);
+              font-family: be-vietnam, Helvetica;
+              background-color: var(--darkblue);
+              border: 2px solid white;
+              color: white;
+              transition: all 0.5s ease;
+            }
+    
+            .btn:hover {
+              background-color: white;
+              color: var(--darkblue);
+              border-color: white;
+            }
           }
   
-          .btn {
-            width: 16rem;
-            height: 4rem;
-            border-radius: 2rem;
-            margin-top: 2rem;
-            font-size: var(--font-small);
-            font-family: be-vietnam, Helvetica;
-            background-color: var(--darkblue);
-            border: 2px solid white;
-            color: white;
-            transition: all 0.5s ease;
-          }
-  
-          .btn:hover {
-            background-color: white;
-            color: var(--darkblue);
-            border-color: white;
-          }
+          
         }
       }
   
