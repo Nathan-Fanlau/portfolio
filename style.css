@@ -6,17 +6,20 @@
 	font-style: normal;
 }
 
-* {
-	font-family: be-vietnam, Helvetica, sans-serif;
-	box-sizing: border-box;
-	margin: 0;
-  cursor: none;
+:root {
+  font-family: be-vietnam, Helvetica, sans-serif;
   --font-extra-big: 5.7rem;
   --font-big: 3.6rem;
   --font-medium: 2.2rem;
   --font-small: 1.4rem;
   --darkgray: rgb(90, 90, 90);
   --shadow: rgb(214, 214, 214);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+  cursor: none;
 	/* outline: 1px solid green; */
 }
 
@@ -195,46 +198,6 @@ body {
 	}
 }
 
-.s2 {
-  .content-container {
-    display: flex;
-    flex-direction: row;
-    margin-top: 8rem;
-    justify-content: center;
-
-    gap: 2rem;
-
-    .images {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      width: 48rem;
-    }
-
-    .text {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      width: 48rem;
-
-      .project-title {
-        font-size: var(--font-extra-big);
-        font-weight: bold;
-      }
-
-      .details {
-        font-size: var(--font-medium);
-      }
-
-      .project-description, .my-involvement {
-        font-size: var(--font-small);
-        color: var(--darkgray);
-      }
-
-    }
-  }
-}
-
 .s3 {
   .content-container {
     display: flex;
@@ -283,12 +246,14 @@ body {
 
           a {
             text-decoration: none;
+            width: 80%;
 
             p {
               color: white;
             }
 
             .description {
+              text-wrap: balance;
               font-size: var(--font-medium);
               font-family: be-vietnam, Helvetica;
             }
@@ -337,6 +302,100 @@ body {
     a:hover {
       background-color: black;
       color: white;
+    }
+  }
+}
+
+.s5 {
+  .content-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 4rem 8rem;
+    gap: 4rem;
+    --offwhite: #fafafa;
+
+    .page-title {
+      text-align: center;
+      .title {
+        font-size: var(--font-big);
+        font-weight: bold;
+      }
+
+      .sub-title {
+        font-size: var(--font-medium);
+      }
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4rem;
+
+      .project-card2 {
+        border-radius: 1.5rem;
+        width: 30rem;
+        height: 36rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0.5rem 1rem var(--shadow);
+        transition: transform 0.3s ease;
+        background-color: var(--offwhite);
+  
+        .project-image {
+          width: 100%;
+          height: 12rem;
+  
+          img {
+            border-radius: 1.5rem 1.5rem 0rem 0rem;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+  
+        .bottom {
+          padding: 2rem;
+  
+          .project-title {
+            font-size: var(--font-medium);
+            font-weight: bold;
+          }
+    
+          .project-description {
+            font-size: var(--font-small);
+            text-wrap: wrap;
+            margin-top: 0.5rem;
+          }
+    
+          .project-tech {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+    
+            img {
+              width: 3rem;
+              height: 3rem;
+              transition: transform 0.3s ease;
+              position: relative;
+            }
+    
+            img:hover {
+              transform: scale(1.2);
+            }
+          }
+  
+        }
+  
+        
+      }
+  
+      .project-card2:hover {
+        transform: scale(1.03);
+      }
+
     }
   }
 }

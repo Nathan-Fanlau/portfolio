@@ -81,9 +81,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  margin-left: 6rem;
-  margin-right: 6rem;
-  margin-top: 6rem;
+  margin: 6rem;
   gap: 3rem;
 
   .header {
@@ -122,6 +120,21 @@ body {
     flex-direction: column;
     gap: 3rem;
     font-size: var(--font-small);
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+
+    div {
+      padding-top: 2rem;
+      box-shadow: 0 6px 8px var(--shadow);
+    }
+
+    h2 {
+      text-align: center;
+    }
   }
 
 }
