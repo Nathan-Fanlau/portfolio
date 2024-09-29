@@ -337,6 +337,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* PageJS Tooltip */
+  #fp-nav {
+    opacity: 0;
+  }
+
   .s1 {
     .content-container {
       flex-direction: column;
