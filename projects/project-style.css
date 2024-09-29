@@ -6,18 +6,27 @@
 	font-style: normal;
 }
 
-* {
-	font-family: be-vietnam, Helvetica, sans-serif;
-	box-sizing: border-box;
-	margin: 0;
-  cursor: none;
+:root {
+  font-family: be-vietnam, Helvetica, sans-serif;
+  --base-white: white;
+  --off-white: #fafafa;
   --font-extra-big: 5.7rem;
   --font-big: 3.6rem;
   --font-medium: 2.2rem;
   --font-small: 1.4rem;
   --darkgray: rgb(90, 90, 90);
-  --shadow: rgb(214, 214, 214);
+  --shadow: rgb(195, 195, 195);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+  cursor: none;
 	/* outline: 1px solid green; */
+}
+
+body {
+  background-color: var(--base-white);
 }
 
 html {
@@ -108,10 +117,16 @@ body {
       }
     }
 
-    .header-bottom {
+    /* .header-bottom {
       display: flex;
       font-size: var(--font-medium);
       gap: 3rem;
+    } */
+
+    .header-bottom {
+      font-size: var(--font-medium);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
