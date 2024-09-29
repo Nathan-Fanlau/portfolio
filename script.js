@@ -1,3 +1,4 @@
+// FullpageJS
 new fullpage('#fullPage', {
   autoScrolling: true,
   navigation: true,
@@ -7,6 +8,8 @@ new fullpage('#fullPage', {
   navigationPosition: 'left',
   continuousVertical: true,
 })
+
+// Cursor
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
 window.addEventListener("mousemove", function(e) {
@@ -19,3 +22,4 @@ window.addEventListener("mousemove", function(e) {
     top: `${posY}px`
   }, {duration: 100, fill: "forwards"});
 })
+
