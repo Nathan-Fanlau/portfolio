@@ -131,6 +131,7 @@ body {
         flex-direction: column;
         width: 48rem;
         gap: 0.8rem;
+        margin-left: 2rem;
 
         .greetings {
           font-size: var(--font-medium);
@@ -331,6 +332,77 @@ body {
     a:hover {
       background-color: black;
       color: var(--base-white);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .s1 {
+    .content-container {
+      flex-direction: column;
+      padding: 0.5rem;
+      gap: 3rem;
+
+      .top {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .text-container {
+          gap: 0.5rem;
+          width: 80%;
+          margin-top: 3rem;
+
+          .greetings {
+            font-size: var(--font-small);
+          }
+
+          .name {
+            font-size: var(--font-medium);
+          }
+
+          .description {
+            font-size: var(--font-small);
+          }
+
+          .icon-wrapper {
+            justify-content: center;
+
+            svg {
+              width: 3.6rem;
+              height: 3.6rem;
+            }
+          }
+        }
+
+        .image-container {
+          width: 20rem;
+          height: 20rem;
+        }
+      }
+
+      .bottom {
+        font-size: var(--font-small);
+
+        .tech-container {
+          gap: 1rem;
+
+          img {
+            width: 2.4rem;
+            height: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .s3 {
+    .text {
+      font-size: var(--font-medium);
+      text-align: center;
+      margin: 4rem;
+      padding: 1rem;
     }
   }
 }
