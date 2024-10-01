@@ -10,10 +10,10 @@
   font-family: be-vietnam, Helvetica, sans-serif;
   --base-white: white;
   --off-white: #fafafa;
-  --font-extra-big: 5.7rem;
+  --font-extra-big: 5rem;
   --font-big: 3.6rem;
-  --font-medium: 2.2rem;
-  --font-small: 1.4rem;
+  --font-medium: 2rem;
+  --font-small: 1.6rem;
   --darkgray: rgb(90, 90, 90);
   --shadow: rgb(195, 195, 195);
 }
@@ -117,12 +117,6 @@ body {
       }
     }
 
-    /* .header-bottom {
-      display: flex;
-      font-size: var(--font-medium);
-      gap: 3rem;
-    } */
-
     .header-bottom {
       font-size: var(--font-medium);
       display: grid;
@@ -133,18 +127,28 @@ body {
   .description {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     font-size: var(--font-small);
+
+    p {
+      text-wrap: pretty;
+    }
   }
 
   .images {
     display: flex;
     flex-direction: column;
     gap: 8rem;
+    margin-top: 4rem;
 
     div {
       padding-top: 2rem;
       box-shadow: 0 6px 8px var(--shadow);
+      border-radius: 1.5rem;
+    }
+
+    img {
+      border-radius: 1.5rem;
     }
 
     h2 {

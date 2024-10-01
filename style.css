@@ -89,11 +89,6 @@ body {
   pointer-events: none;
 }
 
-
-#overlay.active {
-  opacity: 1;
-}
-
 /* PageJS Tooltip */
 #fp-nav ul li {
   .fp-tooltip {
@@ -154,11 +149,11 @@ body {
         .icon-wrapper {
           margin-top: 2rem;
           display: flex;
-          gap: 1rem;
+          gap: 2rem;
         
           svg {
-            width: 3.6rem;
-            height: 3.6rem;
+            width: 5rem;
+            height: 5rem;
             transition: transform 0.3s ease;
           }
 
@@ -341,6 +336,14 @@ body {
     opacity: 0;
   }
 
+  *, body {
+    cursor: default;
+  }
+
+  a:hover, svg:hover {
+    cursor: pointer;
+  }
+
   /* PageJS Tooltip */
   #fp-nav {
     opacity: 0;
@@ -380,8 +383,8 @@ body {
             justify-content: center;
 
             svg {
-              width: 3.6rem;
-              height: 3.6rem;
+              width: 5rem;
+              height: 5rem;
             }
           }
         }
