@@ -157,3 +157,56 @@ body {
   }
 
 }
+
+@media (max-width: 768px) {
+  /* Cursor */
+  .cursor-dot, .cursor-outline {
+    opacity: 0;
+  }
+
+  *, body {
+    cursor: default;
+  }
+
+  a:hover, svg:hover {
+    cursor: pointer;
+  }
+
+  /* Content */
+  .container {
+    margin: 2rem;
+    gap: 2rem;
+
+    .header {
+      .header-top {
+        flex-direction: row;
+        gap: 1.5rem;
+
+        .back-button {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+
+    
+        .project-title {
+          font-size: var(--font-big);
+        }
+      }
+
+      .header-bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .description {
+      font-size: var(--font-small);
+    }
+
+    .images {
+      gap: 4rem;
+      margin-top: 2rem;
+    }
+  }
+}
