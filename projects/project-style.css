@@ -8,8 +8,9 @@
 
 :root {
   font-family: be-vietnam, Helvetica, sans-serif;
-  --base-white: white;
+  --base-color: white;
   --off-white: #fafafa;
+  --text-color: black;
   --font-extra-big: 5rem;
   --font-big: 3.6rem;
   --font-medium: 2rem;
@@ -18,15 +19,24 @@
   --shadow: rgb(195, 195, 195);
 }
 
+.darkmode {
+  font-family: be-vietnam, Helvetica, sans-serif;
+  --base-color: rgb(24, 24, 24);
+  --off-white: rgb(48, 48, 48);
+  --text-color: white;
+  --font-extra-big: 5rem;
+  --font-big: 3.6rem;
+  --font-medium: 2rem;
+  --font-small: 1.6rem;
+  --darkgray: rgb(179, 179, 179);
+  --shadow: rgb(141, 141, 141);
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
   cursor: none;
 	/* outline: 1px solid green; */
-}
-
-body {
-  background-color: var(--base-white);
 }
 
 html {
@@ -61,19 +71,23 @@ h6 {
 
 body {
   cursor: none;
+  background: var(--base-color);
+  color: var(--text-color);
 }
 
+/* Cursor styling */
 .cursor-dot {
   width: 7px;
   height: 7px;
-  background-color: black;
+  background-color: var(--text-color);
   z-index: 10;
 }
 
 .cursor-outline {
   width: 30px;
   height: 30px;
-  border: 2px solid hsla(0, 0%, 10%, 0.5);
+  border: 2px solid var(--text-color);
+  opacity: 0.5;
   z-index: 10;
 }
 
@@ -83,8 +97,40 @@ body {
   left: 0;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 1;
+  z-index: 10;
   pointer-events: none;
+}
+
+/* Dark mode button */
+#theme-switch {
+  height: 5rem;
+  width: 5rem;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--off-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 4rem;
+  right: 6rem;
+  z-index: 5;
+
+  svg {
+    fill: var(--text-color);
+  }
+
+  svg:last-child {
+    display: none;
+  }
+}
+
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+  display: block;
 }
 
 .container {
@@ -153,12 +199,20 @@ body {
 
     h2 {
       text-align: center;
+      margin-bottom: 2rem;
     }
   }
 
 }
 
 @media (max-width: 768px) {
+  #theme-switch {
+    height: 4rem;
+    width: 4rem;
+    top: 3rem;
+    right: 3rem;
+  }
+
   /* Cursor */
   .cursor-dot, .cursor-outline {
     opacity: 0;
@@ -207,6 +261,7 @@ body {
     .images {
       gap: 4rem;
       margin-top: 2rem;
+      margin-bottom: 4rem;
     }
   }
 }
