@@ -8,8 +8,8 @@
 
 :root {
   font-family: be-vietnam, Helvetica, sans-serif;
-  --base-color: white;
-  --off-white: #fafafa;
+  --base-color: #f8f8f8;
+  --off-white: #fcfcfc;
   --text-color: black;
   --font-extra-big: 5rem;
   --font-big: 3.6rem;
@@ -21,7 +21,7 @@
 
 .darkmode {
   font-family: be-vietnam, Helvetica, sans-serif;
-  --base-color: rgb(24, 24, 24);
+  --base-color: #242727;
   --off-white: rgb(48, 48, 48);
   --text-color: white;
   --font-extra-big: 5rem;
@@ -41,6 +41,11 @@
 
 html {
 	font-size: 62.5%;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 img,
@@ -150,11 +155,33 @@ body {
       align-items: center;
 
       .back-button {
-        width: 6rem;
-        height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
         position: relative;
-        bottom: -0.5rem;
-        cursor: pointer;
+        bottom: -0.6rem;
+        background-color: var(--base-color);
+        border: 2px solid var(--text-color);
+        border-radius: 50%;
+        transition: 0.3s linear;
+
+        svg {
+          width: 3rem;
+          height: 3rem;
+          fill: var(--text-color);
+          transition: 0.3s linear;
+        }
+      }
+
+      .back-button:hover{
+        background-color: var(--text-color);
+        color: var(--base-color);
+
+        svg {
+          fill: var(--base-color);
+        }
       }
 
       .project-title {
@@ -167,6 +194,44 @@ body {
       font-size: var(--font-medium);
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4rem;
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: var(--font-medium);
+        font-weight: bold;
+        width: 18rem;
+        height: 4.8rem;
+        background-color: var(--base-color);
+        border: 2px solid var(--text-color);
+        border-radius: 0.5rem;
+        transition: 0.3s linear;
+
+        svg {
+          width: 3rem;
+          height: 3rem;
+          fill: var(--text-color);
+          transition: 0.3s linear;
+        }
+      }
+
+      .btn:hover{
+        background-color: var(--text-color);
+        color: var(--base-color);
+
+        svg {
+          fill: var(--base-color);
+        }
+      }
     }
   }
 
@@ -198,6 +263,7 @@ body {
     }
 
     h2 {
+      font-size: var(--font-big);
       text-align: center;
       margin-bottom: 2rem;
     }
@@ -209,8 +275,8 @@ body {
   #theme-switch {
     height: 4rem;
     width: 4rem;
-    top: 3rem;
-    right: 3rem;
+    top: 3.2rem;
+    right: 2rem;
   }
 
   /* Cursor */
@@ -237,8 +303,8 @@ body {
         gap: 1.5rem;
 
         .back-button {
-          width: 4.8rem;
-          height: 4.8rem;
+          width: 4rem;
+          height: 4rem;
         }
 
     
@@ -252,6 +318,10 @@ body {
         grid-template-columns: 1fr;
         gap: 1rem;
       }
+
+      .buttons {
+        gap: 2rem;
+      }
     }
 
     .description {
@@ -262,6 +332,10 @@ body {
       gap: 4rem;
       margin-top: 2rem;
       margin-bottom: 4rem;
+
+      h2 {
+        font-size: var(--font-medium);
+      }
     }
   }
 }
