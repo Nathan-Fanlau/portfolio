@@ -193,6 +193,16 @@ body {
             color: var(--text-color);
             font-weight: bold;
           };
+
+          u {
+            color: var(--text-color);
+            transition: all 0.5s ease;
+          }
+
+          u:hover {
+            background-color: var(--text-color);
+            color: var(--base-color);
+          }
         }
   
         .icon-wrapper {
@@ -372,7 +382,7 @@ body {
 
     a:link {
       color: var(--text-color);
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     a:hover {
